@@ -15,24 +15,24 @@
             justify-content: center;
         }
         .container {
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
             background: #FFFFFF;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             text-align: center;
             box-sizing: border-box;
         }
         h1 {
             color: #B8860B;
-            margin-bottom: 8px;
-            font-size: 24px;
+            margin-bottom: 6px;
+            font-size: 22px;
         }
         .subtitle {
             color: #8B4513;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 20px;
         }
         .card {
@@ -40,25 +40,34 @@
             border-left: 5px solid #FFD700;
             padding: 15px;
             text-align: left;
-            border-radius: 6px;
-            margin-bottom: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5;
         }
-        .upi-box {
-            border: 2px solid #FFD700;
-            border-radius: 12px;
+        .qr-card {
+            background: #F4F6F9;
+            border-radius: 16px;
             padding: 20px;
-            background: #FFFDF0;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+        }
+        .qr-card h3 {
+            margin-top: 0;
+            color: #111;
+            font-size: 18px;
+        }
+        .qr-img {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 15px 0;
         }
         .upi-id {
-            background: #EAEAEA;
-            padding: 8px 14px;
             font-weight: bold;
-            font-family: monospace;
-            border-radius: 6px;
-            display: inline-block;
             font-size: 16px;
-            margin-top: 10px;
+            color: #222;
         }
         .btn-pay {
             display: inline-block;
@@ -68,11 +77,12 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            border-radius: 8px;
-            margin-top: 18px;
-            border: none;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 2px solid #000;
             cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            width: 100%;
+            box-sizing: border-box;
         }
         .btn-pay:hover {
             background-color: #E6C200;
@@ -85,23 +95,23 @@
     <h1>Waheguru Ji Ka Khalsa<br>Waheguru Ji Ki Fateh</h1>
     <div class="subtitle">Support Gutka Sahib & Gurbani History App</div>
 
-    <!-- Seva Card -->
+    <!-- Seva Info Card -->
     <div class="card">
-        <h3 style="margin-top:0; color:#8B4513;">Seva & Support</h3>
-        <p style="margin-bottom:0; line-height:1.5;">This app is maintained as Seva to spread Gurbani and Sikh History worldwide without ads. Your support helps us cover server costs, database maintenance, and new features.</p>
+        <strong style="color: #8B4513;">Seva & Support:</strong><br>
+        This app is maintained as Seva to spread Gurbani and Sikh History worldwide. Your support helps us cover server costs, database maintenance, and app updates.
     </div>
 
-    <!-- UPI Box -->
-    <div class="upi-box">
-        <h3 style="color: #8B4513; margin-top:0;">Pay via UPI</h3>
-        <p style="margin-bottom:5px;">Supports Google Pay, PhonePe, Paytm, BHIM:</p>
+    <!-- QR Code & Payment Card -->
+    <div class="qr-card">
+        <h3>Sharanjit Singh</h3>
         
-        <!-- Put your real UPI ID below -->
-        <div>UPI ID: <span class="upi-id">YOUR_REAL_UPI_ID@upi</span></div>
+        <!-- QR Code Image -->
+        <img src="qr.png" alt="Sharanjit Singh UPI QR Code" class="qr-img">
 
-        <!-- Tap to Pay Button for Mobile Users -->
-        <br>
-        <a href="upi://pay?pa=YOUR_REAL_UPI_ID@upi&pn=Sharanjit%20Singh&tn=Gutka%20Sahib%20Seva&cu=INR" style="text-decoration: none;">
+        <div class="upi-id">UPI ID: <strong>9478444580@hdfc</strong></div>
+
+        <!-- Direct Mobile UPI App Trigger -->
+        <a href="upi://pay?pa=9478444580@hdfc&pn=Sharanjit%20Singh&tn=Gutka%20Sahib%20Seva&cu=INR" style="text-decoration: none;">
             <button class="btn-pay">📲 Tap to Pay with Any UPI App</button>
         </a>
     </div>
