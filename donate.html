@@ -16,20 +16,23 @@
         }
         .container {
             max-width: 600px;
+            width: 100%;
             background: #FFFFFF;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-align: center;
+            box-sizing: border-box;
         }
         h1 {
             color: #B8860B;
             margin-bottom: 8px;
+            font-size: 24px;
         }
         .subtitle {
             color: #8B4513;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 16px;
             margin-bottom: 20px;
         }
         .card {
@@ -40,31 +43,38 @@
             border-radius: 6px;
             margin-bottom: 25px;
         }
-        .method {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #E0E0E0;
-            border-radius: 8px;
+        .upi-box {
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            background: #FFFDF0;
+            margin-bottom: 25px;
         }
         .upi-id {
-            background: #F0F0F0;
-            padding: 8px 12px;
+            background: #EAEAEA;
+            padding: 8px 14px;
             font-weight: bold;
             font-family: monospace;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #FFD700;
-            color: #000;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
             border-radius: 6px;
+            display: inline-block;
+            font-size: 16px;
             margin-top: 10px;
         }
-        .btn:hover {
+        .btn-pay {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #000000;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 18px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+        .btn-pay:hover {
             background-color: #E6C200;
         }
     </style>
@@ -75,32 +85,28 @@
     <h1>Waheguru Ji Ka Khalsa<br>Waheguru Ji Ki Fateh</h1>
     <div class="subtitle">Support Gutka Sahib & Gurbani History App</div>
 
+    <!-- Seva Card -->
     <div class="card">
-        <h3>Seva & Support</h3>
-        <p>This app is maintained as Seva to spread Gurbani and Sikh History worldwide without ads interrupting prayer. Your support helps us cover server costs, database maintenance, and new features.</p>
+        <h3 style="margin-top:0; color:#8B4513;">Seva & Support</h3>
+        <p style="margin-bottom:0; line-height:1.5;">This app is maintained as Seva to spread Gurbani and Sikh History worldwide without ads. Your support helps us cover server costs, database maintenance, and new features.</p>
     </div>
 
-    <!-- UPI Payment Option (India) -->
-   <!-- UPI Payment & QR Code Section -->
-<div style="text-align: center; margin: 20px 0; padding: 20px; border: 2px solid #FFD700; border-radius: 12px; background: #FFFDF0;">
-    <h3 style="color: #8B4513;">Scan & Pay via UPI</h3>
-    <p>Scan with Google Pay, PhonePe, Paytm, or BHIM:</p>
+    <!-- UPI Box -->
+    <div class="upi-box">
+        <h3 style="color: #8B4513; margin-top:0;">Pay via UPI</h3>
+        <p style="margin-bottom:5px;">Supports Google Pay, PhonePe, Paytm, BHIM:</p>
+        
+        <!-- Put your real UPI ID below -->
+        <div>UPI ID: <span class="upi-id">YOUR_REAL_UPI_ID@upi</span></div>
 
-    <!-- UPI QR Code Image -->
-    <img src="upi.jpeg" alt="UPI QR Code" style="max-width: 250px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-
-    <p style="margin-top: 15px;">UPI ID: <strong style="font-family: monospace; background: #EEE; padding: 4px 8px; border-radius: 4px;">9478444580@pthdfc</strong></p>
-</div>
-
-    <!-- Buy Me a Coffee / PayPal Option (Global) -->
-    <div class="method">
-        <h3>International Support</h3>
-        <p>Support via PayPal or Buy Me a Coffee:</p>
-        <a href="https://www.buymeacoffee.com/yourusername" target="_blank" class="btn">☕ Buy Me a Coffee</a>
-        <!-- OR PayPal Link: <a href="https://paypal.me/yourusername" target="_blank" class="btn">PayPal</a> -->
+        <!-- Tap to Pay Button for Mobile Users -->
+        <br>
+        <a href="upi://pay?pa=YOUR_REAL_UPI_ID@upi&pn=Sharanjit%20Singh&tn=Gutka%20Sahib%20Seva&cu=INR" style="text-decoration: none;">
+            <button class="btn-pay">📲 Tap to Pay with Any UPI App</button>
+        </a>
     </div>
 
-    <div style="margin-top: 30px;">
+    <div>
         <a href="index.html" style="color: #8B4513; text-decoration: none; font-weight: bold;">← Back to Home</a>
     </div>
 </div>
